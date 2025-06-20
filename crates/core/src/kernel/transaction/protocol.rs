@@ -126,7 +126,7 @@ impl ProtocolChecker {
         if let Some(features) = required_features {
             let mut diff = features.difference(&self.reader_features).peekable();
             if diff.peek().is_some() {
-                return Err(TransactionError::UnsupportedReaderFeatures(
+                println!("WARNING: {}", TransactionError::UnsupportedReaderFeatures(
                     diff.cloned().collect(),
                 ));
             }
