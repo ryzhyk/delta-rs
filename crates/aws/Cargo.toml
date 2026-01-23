@@ -68,8 +68,7 @@ native-tls = [
     "hyper-tls",
 ]
 rustls = [
-    "aws-config/client-hyper",
-    "aws-config/rustls",
-    "aws-sdk-dynamodb/rustls",
-    "aws-sdk-sts/rustls",
+    "aws-config/default-https-client",
+    "aws-sdk-dynamodb/default-https-client",
+    "aws-sdk-sts/default-https-client",
 ]
